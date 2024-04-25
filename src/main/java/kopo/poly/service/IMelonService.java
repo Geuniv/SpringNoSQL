@@ -54,4 +54,14 @@ public interface IMelonService {
      * 그 member 필드에 BTS 멤버 이름들을 List로 저장하기
      */
     List<MelonDTO> updateAddListField(MelonDTO pDTO) throws Exception;
+
+    /**
+     * 가수이름 수정 및 addData 필드 추가하기
+     */
+    List<MelonDTO> updateFieldAndAddField(MelonDTO pDTO) throws Exception;
+
+    /**
+     * BTS 노래 삭제하기
+     */
+    public List<MelonDTO> deleteDocument(MelonDTO pDTO) throws Exception;
 }

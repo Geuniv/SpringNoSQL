@@ -120,7 +120,7 @@ public interface IMelonMapper {
      * @param pDTO  수정할 가수이름, 수정될 노래제목, 추가 필드 값
      * @return 저장 결과
      */
-    int updateFieldAndField(String colNm, MelonDTO pDTO) throws Exception;
+    int updateFieldAndAddField(String colNm, MelonDTO pDTO) throws Exception;
 
     /**
      * @param colNm 조회할 컬렉션 이름
@@ -128,4 +128,14 @@ public interface IMelonMapper {
      * @return 노래 리스트
      */
     List<MelonDTO> getSingerSongAddData(String colNm, MelonDTO pDTO) throws Exception;
+
+    /**
+     * 가수의 노래 삭제하기
+     *
+     * @param colNm 저장할 컬렉션 이름
+     * @param pDTO  삭제할 가수 이름
+     * @return 저장 결과
+     */
+    int deleteDocument(String colNm, MelonDTO pDTO) throws Exception;
+
 }
